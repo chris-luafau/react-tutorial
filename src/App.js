@@ -17,21 +17,21 @@ class App extends React.Component {
   }
 
   removeCharacter = index => {
-    const { characters } = this.state
+    const { characters } = this.state;
 
     this.setState({
       characters: characters.filter((character, i) => {
         return i !== index
       }),
-    })
+    });
   }
 
   handleSubmit = character => {
-    this.setState({ characters: [...this.state.characters, character] })
+    this.setState({ characters: [...this.state.characters, character] });
   }
 
   render() {
-    const { characters } = this.state
+    const { characters } = this.state;
 
     return (
       <div className="container">
@@ -39,7 +39,7 @@ class App extends React.Component {
         <Table characterData={characters} removeCharacter={this.removeCharacter} />
         <Form handleSubmit={this.handleSubmit}/>
       </div>
-    )
+    );
   }
 }
 
