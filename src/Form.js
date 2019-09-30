@@ -30,6 +30,8 @@ class Form extends React.Component {
     const { name, job } = this.state
 
     return (
+      <h1>React Tutorial</h1>
+      <h3>Enter name and job.</h3>
       <form>
         <label>Name</label>
         <input
