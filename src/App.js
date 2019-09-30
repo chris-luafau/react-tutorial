@@ -2,6 +2,15 @@ import React from 'react'
 import Table from './Table.js'
 import Form from './Form.js'
 
+const Header = () => {
+  return (
+    <div>
+      <h1>React Tutorial</h1>
+      <p>Add names and jobs to the table.</p>
+    </div>
+  )
+}
+
 class App extends React.Component {
   state = {
     characters: [],
@@ -26,6 +35,7 @@ class App extends React.Component {
 
     return (
       <div className="container">
+        <Header />
         <Table characterData={characters} removeCharacter={this.removeCharacter} />
         <Form handleSubmit={this.handleSubmit}/>
       </div>
